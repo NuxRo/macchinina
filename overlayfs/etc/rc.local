@@ -1,6 +1,6 @@
 #!/bin/sh
 
-## rc.local style script for runnign custom stuff during boot
+## rc.local style script for running custom stuff during boot
 ## place commands before "exit 0"
 
 exit 0
