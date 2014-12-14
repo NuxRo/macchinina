@@ -692,7 +692,9 @@ BR2_PACKAGE_ACPID=y
 # lshw needs a toolchain w/ C++, largefile, wchar
 #
 # BR2_PACKAGE_LSUIO is not set
-# BR2_PACKAGE_LVM2 is not set
+BR2_PACKAGE_LVM2=y
+BR2_PACKAGE_LVM2_STANDARD_INSTALL=y
+# BR2_PACKAGE_LVM2_APP_LIBRARY is not set
 # BR2_PACKAGE_MDADM is not set
 # BR2_PACKAGE_MEDIA_CTL is not set
 # BR2_PACKAGE_MEMTESTER is not set
@@ -710,7 +712,7 @@ BR2_PACKAGE_MINICOM=y
 #
 # openpowerlink needs a toolchain w/ C++, threads
 #
-# BR2_PACKAGE_PARTED is not set
+BR2_PACKAGE_PARTED=y
 # BR2_PACKAGE_PCIUTILS is not set
 # BR2_PACKAGE_PICOCOM is not set
 # BR2_PACKAGE_PPS_TOOLS is not set
