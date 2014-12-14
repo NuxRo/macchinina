@@ -9,6 +9,7 @@ qemu-img convert -p -f raw -O vpc macchinina.img macchinina-hyperv.vhd
 cp macchinina.img macchinina-xen.img
 vhd-util convert -s 0 -t 1 -i macchinina-xen.img -o macchinina-xenstage.img
 faketime '2010-01-01' vhd-util convert -s 1 -t 2 -i macchinina-xenstage.img -o macchinina-xen.vhd
+rm -fv macchinina-xenstage.img.bak
 
 # compress
 bzip2 -v macchinina-kvm.qcow2 macchinina-vmware.vmdk macchinina-xen.vhd
