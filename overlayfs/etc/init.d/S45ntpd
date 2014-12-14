@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# start ntpd so we have reliable time keeping
+/usr/sbin/ntpd -p europe.pool.ntp.org
+
