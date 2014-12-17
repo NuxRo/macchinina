@@ -12,6 +12,8 @@ faketime '2010-01-01' vhd-util convert -s 1 -t 2 -i macchinina-xenstage.img -o m
 rm -fv macchinina-xenstage.img.bak
 
 # compress
+rm -vf macchinina-kvm.qcow2.bz2 macchinina-vmware.vmdk.bz2 macchinina-xen.vhd.bz2 macchinina-hyperv.vhd.zip
 bzip2 -v macchinina-kvm.qcow2 macchinina-vmware.vmdk macchinina-xen.vhd
-zip --verbose macchinina-hyperv.vhd.zip macchinina-hyperv.vhd && rm -fv macchinina-hyperv.vhd
+zip --verbose macchinina-hyperv.vhd.zip macchinina-hyperv.vhd
 
+rm -fv macchinina-kvm.qcow2 macchinina-vmware.vmdk macchinina-xen.vhd macchinina-hyperv.vhd

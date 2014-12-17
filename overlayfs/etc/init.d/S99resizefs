@@ -1,0 +1,3 @@
+#!/bin/sh
+
+resize2fs `blkid | grep 'LABEL="rootfs"'| cut -d ":" -f 1`
