@@ -274,7 +274,30 @@ BR2_ROOTFS_POST_IMAGE_SCRIPT=""
 #
 # Kernel
 #
-# BR2_LINUX_KERNEL is not set
+BR2_LINUX_KERNEL=y
+BR2_LINUX_KERNEL_LATEST_VERSION=y
+# BR2_LINUX_KERNEL_SAME_AS_HEADERS is not set
+# BR2_LINUX_KERNEL_CUSTOM_VERSION is not set
+# BR2_LINUX_KERNEL_CUSTOM_TARBALL is not set
+# BR2_LINUX_KERNEL_CUSTOM_GIT is not set
+# BR2_LINUX_KERNEL_CUSTOM_HG is not set
+# BR2_LINUX_KERNEL_CUSTOM_LOCAL is not set
+BR2_LINUX_KERNEL_VERSION="3.18"
+BR2_LINUX_KERNEL_PATCH=""
+# BR2_LINUX_KERNEL_USE_DEFCONFIG is not set
+BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
+BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="/macchinina/git/configs/kernel/dotkernelconfig"
+BR2_LINUX_KERNEL_BZIMAGE=y
+# BR2_LINUX_KERNEL_VMLINUX is not set
+# BR2_LINUX_KERNEL_IMAGE_TARGET_CUSTOM is not set
+# BR2_LINUX_KERNEL_DTS_SUPPORT is not set
+BR2_LINUX_KERNEL_INSTALL_TARGET=y
+
+#
+# Linux Kernel Extensions
+#
+# BR2_LINUX_KERNEL_EXT_XENOMAI is not set
+# BR2_LINUX_KERNEL_EXT_RTAI is not set
 
 #
 # Target packages
@@ -395,10 +418,7 @@ BR2_PACKAGE_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
 #
 # BR2_PACKAGE_IOZONE is not set
 # BR2_PACKAGE_KEXEC is not set
-
-#
-# ktap needs a Linux kernel to be built
-#
+# BR2_PACKAGE_KTAP is not set
 # BR2_PACKAGE_LATENCYTOP is not set
 # BR2_PACKAGE_LMBENCH is not set
 # BR2_PACKAGE_LSOF is not set
@@ -411,10 +431,7 @@ BR2_PACKAGE_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
 #
 # lttng-babeltrace needs a uclibc snapshot or (e)glib toolchain w/ wchar, threads, largefile
 #
-
-#
-# lttng-modules needs a Linux kernel to be built
-#
+# BR2_PACKAGE_LTTNG_MODULES is not set
 # BR2_PACKAGE_LTTNG_TOOLS is not set
 # BR2_PACKAGE_MCELOG is not set
 # BR2_PACKAGE_MEMSTAT is not set
@@ -424,10 +441,7 @@ BR2_PACKAGE_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
 # oprofile needs a toolchain w/ C++, wchar
 #
 # BR2_PACKAGE_PAX_UTILS is not set
-
-#
-# perf needs a toolchain w/ largefile and a Linux kernel to be built
-#
+# BR2_PACKAGE_PERF is not set
 # BR2_PACKAGE_PV is not set
 # BR2_PACKAGE_RAMSMP is not set
 # BR2_PACKAGE_RAMSPEED is not set
@@ -522,10 +536,7 @@ BR2_PACKAGE_E2FSPROGS_UUIDGEN=y
 # BR2_PACKAGE_MTOOLS is not set
 # BR2_PACKAGE_NFS_UTILS is not set
 # BR2_PACKAGE_NTFS_3G is not set
-
-#
-# simicsfs needs a Linux kernel to be built
-#
+# BR2_PACKAGE_SIMICSFS is not set
 # BR2_PACKAGE_SQUASHFS is not set
 # BR2_PACKAGE_SSHFS is not set
 # BR2_PACKAGE_UNIONFS is not set
@@ -573,10 +584,7 @@ BR2_PACKAGE_E2FSPROGS_UUIDGEN=y
 #
 # BR2_PACKAGE_FBV is not set
 # BR2_PACKAGE_IMAGEMAGICK is not set
-
-#
-# linux-fusion needs a Linux kernel to be built
-#
+# BR2_PACKAGE_LINUX_FUSION is not set
 
 #
 # mesa3d needs udev /dev management and a toolchain w/ C++, largefile, NPTL
@@ -964,10 +972,7 @@ BR2_PACKAGE_BOTAN_ARCH_SUPPORTS=y
 # botan needs a toolchain w/ C++, threads
 #
 # BR2_PACKAGE_CA_CERTIFICATES is not set
-
-#
-# cryptodev needs a Linux kernel to be built
-#
+# BR2_PACKAGE_CRYPTODEV is not set
 # BR2_PACKAGE_GNUTLS is not set
 # BR2_PACKAGE_LIBASSUAN is not set
 # BR2_PACKAGE_LIBGCRYPT is not set
@@ -1642,10 +1647,7 @@ BR2_PACKAGE_FPING=y
 # BR2_PACKAGE_HTTPING is not set
 # BR2_PACKAGE_IFPLUGD is not set
 # BR2_PACKAGE_IFTOP is not set
-
-#
-# igh-ethercat needs a Linux kernel to be built
-#
+# BR2_PACKAGE_IGH_ETHERCAT is not set
 # BR2_PACKAGE_IGMPPROXY is not set
 # BR2_PACKAGE_INADYN is not set
 
@@ -1948,14 +1950,8 @@ BR2_PACKAGE_NANO_TINY=y
 # BR2_TARGET_ROOTFS_CPIO is not set
 # BR2_TARGET_ROOTFS_CRAMFS is not set
 # BR2_TARGET_ROOTFS_EXT2 is not set
-
-#
-# initramfs needs a Linux kernel to be built
-#
-
-#
-# iso image needs a Linux kernel to be built
-#
+# BR2_TARGET_ROOTFS_INITRAMFS is not set
+# BR2_TARGET_ROOTFS_ISO9660 is not set
 # BR2_TARGET_ROOTFS_JFFS2 is not set
 # BR2_TARGET_ROOTFS_ROMFS is not set
 # BR2_TARGET_ROOTFS_SQUASHFS is not set
