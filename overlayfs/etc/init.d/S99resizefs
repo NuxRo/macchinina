@@ -1,3 +1,17 @@
 #!/bin/sh
 
-resize2fs `blkid | grep 'LABEL="rootfs"'| cut -d ":" -f 1`
+# this script expand the / ext4 filesystem to match whatever increase in the underlying partition
+
+case "$1" in
+        start)  
+                echo "Resizing / fs if needed"
+		resize2fs `blkid | grep 'LABEL="rootfs"'| cut -d ":" -f 1`
+                ;;
+        stop)   
+                exit 0
+                ;;
+        restart)
+                exit 0
+                ;;
+esac
+

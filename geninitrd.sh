@@ -27,16 +27,16 @@ clear
 
 
 #Function for parsing command line options with "=" in them
-# get_opt("init=/sbin/init") will return "/sbin/init"
-#get_opt() {
-#	echo "$@" | cut -d "=" -f 2
-#}
+#get_opt("init=/sbin/init") will return "/sbin/init"
+get_opt() {
+	echo "$@" | cut -d "=" -f 2
+}
 
 #Defaults
 init="/sbin/init"
 root=`/bin/busybox blkid | grep rootfs| cut -d ":" -f 1`
 
-Process command line options
+#Process command line options
 for i in $(cat /proc/cmdline); do
 	case $i in
 		root\=*)
@@ -56,21 +56,27 @@ vdisk=`echo $rootpart| sed s/[0-9]//g`
 n
 p
 2
-
+20480
 
 w
-" | /bin/busybox fdisk -u $vdisk
+" | /bin/busybox fdisk -u $vdisk > /dev/null
 
 
 #Mount the root device
 /bin/echo newroot is $root
 /bin/mount $root /newroot
 
+# we need to move these, as per http://landley.net/writing/rootfs-programming.html, busybox' switch_root is a bit dumb, util-linux one would do it automatically
+mount --move /sys /newroot/sys
+mount --move /proc /newroot/proc
+mount --move /dev /newroot/dev
+
 #Check if $init exists and is executable
 if [[ -x "/newroot/${init}" ]] ; then
 	#Unmount all other mounts so that the ram used by
 	#the initramfs can be cleared after switch_root
-	umount /sys /proc
+	#umount /sys /proc
+	# no need for this anymore as we --move the mounts, see above
 	
 	#Switch to the new root and execute init
 	exec switch_root /newroot "${init}"

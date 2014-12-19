@@ -64,6 +64,7 @@ case "$1" in
 		;;
 esac
 
+# we need to specify somewhere the dhcp server so we can use it's IP in the cloudstack root & ssh key scripts
 echo $serverid > /var/log/udhcpc.serverid
 
 exit 0
