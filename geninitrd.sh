@@ -19,6 +19,8 @@ cat > initrd/init << "EOF"
 /bin/mount -t sysfs sysfs /sys
 /bin/mount -t devtmpfs none /dev
 
+ 
+
 #Disable kernel messages from popping onto the screen
 echo 0 > /proc/sys/kernel/printk
 
@@ -93,3 +95,4 @@ cd initrd
 find . | cpio -H newc -o > ../initrd.cpio
 cd ..
 cat initrd.cpio | gzip > initrd.igz
+rm -rf initrd initrd.cpio
