@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# basic script to retrieve and execute user data
+echo ""
