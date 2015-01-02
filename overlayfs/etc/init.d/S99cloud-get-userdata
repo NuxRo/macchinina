@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# minimal script to retrieve and execute user data
+
+
+USERDATA_SERVER_IP=`cat /var/log/udhcpc.serverid`
+USERDATAFILE=$(echo `mktemp`-cloud-userdata)
+LOCKFILE="/.userdatahasrun"
+
+if [ ! -f "$LOCKFILE" ]
+        then
+                logger -t cloud "Retriving user data"
+                wget -q -t 3 -T 20 -O $USERDATAFILE $USERDATA_SERVER_IP/latest/user-data && touch $LOCKFILE
+                chmod 0700 $USERDATAFILE
+		logger -t cloud "Executing user data from $USERDATAFILE"
+                $USERDATAFILE
+        else
+                logger -t cloud "Userdata has already been dealt with, exitting"
+                exit 0
+fi
