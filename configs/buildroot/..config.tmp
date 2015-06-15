@@ -13,7 +13,6 @@ deps_config := \
 	package/omap-u-boot-utils/Config.in.host \
 	package/mtools/Config.in.host \
 	package/mtd/Config.in.host \
-	package/mke2img/Config.in.host \
 	package/lpc3250loader/Config.in.host \
 	package/genpart/Config.in.host \
 	package/genimage/Config.in.host \
@@ -84,7 +83,6 @@ deps_config := \
 	package/getent/Config.in \
 	package/ftop/Config.in \
 	package/dsp-tools/Config.in \
-	package/debianutils/Config.in \
 	package/dcron/Config.in \
 	package/cpuload/Config.in \
 	package/coreutils/Config.in \
@@ -380,7 +378,6 @@ deps_config := \
 	package/classpath/Config.in \
 	package/clapack/Config.in \
 	package/boost/Config.in \
-	package/bdwgc/Config.in \
 	package/armadillo/Config.in \
 	package/argp-standalone/Config.in \
 	package/apr-util/Config.in \
@@ -402,7 +399,6 @@ deps_config := \
 	package/neon/Config.in \
 	package/libwebsockets/Config.in \
 	package/libvncserver/Config.in \
-	package/liburiparser/Config.in \
 	package/libupnpp/Config.in \
 	package/libupnp/Config.in \
 	package/libtorrent/Config.in \
@@ -590,7 +586,6 @@ deps_config := \
 	package/freetype/Config.in \
 	package/fontconfig/Config.in \
 	package/fltk/Config.in \
-	package/exiv2/Config.in \
 	package/cairo/Config.in \
 	package/atk/Config.in \
 	package/adwaita-icon-theme/Config.in \
@@ -667,8 +662,6 @@ deps_config := \
 	package/expect/Config.in \
 	package/tcl/Config.in \
 	package/ruby/Config.in \
-	package/python-werkzeug/Config.in \
-	package/python-webpy/Config.in \
 	package/python-versiontools/Config.in \
 	package/python-urwid/Config.in \
 	package/python-tornado/Config.in \
@@ -677,7 +670,6 @@ deps_config := \
 	package/python-setuptools/Config.in \
 	package/python-serial/Config.in \
 	package/python-rtslib-fb/Config.in \
-	package/python-requests/Config.in \
 	package/python-pyzmq/Config.in \
 	package/python-pyusb/Config.in \
 	package/python-pysnmp-mibs/Config.in \
@@ -689,43 +681,29 @@ deps_config := \
 	package/python-pygame/Config.in \
 	package/python-pycrypto/Config.in \
 	package/python-pyasn/Config.in \
-	package/python-psutil/Config.in \
 	package/python-protobuf/Config.in \
 	package/python-posix-ipc/Config.in \
-	package/python-pam/Config.in \
 	package/python-numpy/Config.in \
 	package/python-nfc/Config.in \
-	package/python-networkmanager/Config.in \
 	package/python-netifaces/Config.in \
 	package/python-msgpack/Config.in \
 	package/python-meld3/Config.in \
-	package/python-markupsafe/Config.in \
 	package/python-mad/Config.in \
 	package/python-libconfig/Config.in \
 	package/python-keyring/Config.in \
 	package/python-json-schema-validator/Config.in \
-	package/python-jinja2/Config.in \
-	package/python-itsdangerous/Config.in \
 	package/python-ipython/Config.in \
 	package/python-ipy/Config.in \
-	package/python-ipaddr/Config.in \
 	package/python-id3/Config.in \
-	package/python-httplib2/Config.in \
-	package/python-gobject/Config.in \
 	package/python-flup/Config.in \
-	package/python-flask/Config.in \
-	package/python-enum34/Config.in \
 	package/python-dpkt/Config.in \
-	package/python-docopt/Config.in \
 	package/python-dialog/Config.in \
 	package/python-daemon/Config.in \
 	package/python-crc16/Config.in \
 	package/python-configshell-fb/Config.in \
 	package/python-configobj/Config.in \
 	package/python-cffi/Config.in \
-	package/python-certifi/Config.in \
 	package/python-bottle/Config.in \
-	package/python-alsaaudio/Config.in \
 	package/python3/Config.in \
 	package/python/Config.in \
 	package/php-zmq/Config.in \
@@ -797,7 +775,6 @@ deps_config := \
 	package/jimtcl/Config.in \
 	package/jamvm/Config.in \
 	package/haserl/Config.in \
-	package/guile/Config.in \
 	package/erlang/Config.in \
 	package/enscript/Config.in \
 	package/wipe/Config.in \
@@ -809,7 +786,6 @@ deps_config := \
 	package/udisks/Config.in \
 	package/udev/Config.in \
 	package/uboot-tools/Config.in \
-	package/triggerhappy/Config.in \
 	package/ti-utils/Config.in \
 	package/ti-uim/Config.in \
 	package/ti-gfx/Config.in \
@@ -872,7 +848,6 @@ deps_config := \
 	package/gadgetfs-test/Config.in \
 	package/fxload/Config.in \
 	package/freescale-imx/gpu-viv-bin-mx6q/Config.in \
-	package/freescale-imx/libz160/Config.in \
 	package/freescale-imx/firmware-imx/Config.in \
 	package/freescale-imx/imx-vpu/Config.in \
 	package/freescale-imx/imx-lib/Config.in \
@@ -1332,7 +1307,6 @@ deps_config := \
 	package/oprofile/Config.in \
 	package/netperf/Config.in \
 	package/memstat/Config.in \
-	package/mcelog/Config.in \
 	package/lttng-tools/Config.in \
 	package/lttng-modules/Config.in \
 	package/lttng-babeltrace/Config.in \
@@ -1355,7 +1329,6 @@ deps_config := \
 	package/dhrystone/Config.in \
 	package/cache-calibrator/Config.in \
 	package/bonnie/Config.in \
-	package/blktrace/Config.in \
 	package/xz/Config.in \
 	package/lzop/Config.in \
 	package/lzip/Config.in \
@@ -1450,20 +1423,20 @@ deps_config := \
 	arch/Config.in \
 	Config.in
 
-/macchinina/buildroot/output/build/buildroot-config/auto.conf: \
+/macchinina/buildroot-2014.11/output/build/buildroot-config/auto.conf: \
 	$(deps_config)
 
 ifneq "$(BR2_DEFCONFIG)" ""
-/macchinina/buildroot/output/build/buildroot-config/auto.conf: FORCE
+/macchinina/buildroot-2014.11/output/build/buildroot-config/auto.conf: FORCE
 endif
 ifneq "$(BR2_EXTERNAL)" "support/dummy-external"
-/macchinina/buildroot/output/build/buildroot-config/auto.conf: FORCE
+/macchinina/buildroot-2014.11/output/build/buildroot-config/auto.conf: FORCE
 endif
 ifneq "$(HOSTARCH)" "x86_64"
-/macchinina/buildroot/output/build/buildroot-config/auto.conf: FORCE
+/macchinina/buildroot-2014.11/output/build/buildroot-config/auto.conf: FORCE
 endif
-ifneq "$(BR2_VERSION_FULL)" "2015.02-git-00376-g4e561ed"
-/macchinina/buildroot/output/build/buildroot-config/auto.conf: FORCE
+ifneq "$(BR2_VERSION_FULL)" "2014.11"
+/macchinina/buildroot-2014.11/output/build/buildroot-config/auto.conf: FORCE
 endif
 
 $(deps_config): ;
